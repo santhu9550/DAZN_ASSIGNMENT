@@ -41,7 +41,7 @@ passport.use(
 );
 
 app.use(passport.initialize());
-
+app.get("/",(req, res) => res.send("Dazn Assignment Service"));
 // api routes
 app.use('/api', passport.authenticate('basic', { session: false }), router);
 
