@@ -10,7 +10,8 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test": "mocha --require ts-node/register tests/**/*.spec.ts",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "build":"npm install && npm start"
   },
   "devDependencies": {
     "@types/compression": "^1.7.5",
