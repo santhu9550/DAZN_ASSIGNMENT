@@ -1,7 +1,7 @@
 import app from './app';
 import mongoose from 'mongoose';
 import config from './config/config';
-const port = 3000;
+const port = process.env.PORT || 3000;
 let server: any = null;
 const mongooseuri: string = config.mongoose.url;
 

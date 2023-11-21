@@ -1,7 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
-import compression from 'compression';
 import cors from 'cors';
 import httpStatus from 'http-status';
 import ApiError from './utils/ApiError';
@@ -24,9 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // sanitize request data
 app.use(mongoSanitize());
-
-// gzip compression
-app.use(compression());
 
 // enable cors
 app.use(cors());
